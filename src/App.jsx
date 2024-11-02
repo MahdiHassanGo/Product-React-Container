@@ -16,8 +16,17 @@ function App() {
  const handleSelectedProduct = (product) => {
 
   const isExist = selectedProducts.find((p)=> p.id ==product.id);
+
+
+  if(isExist){
+alert('already added cannot add anymore');
+  }
+  else{
     const newProducts = {...selectedProducts,product};
     setSelectedProducts(newProducts);
+  }
+
+  
   };
 
   const handleIsActiveState = (status) => {
